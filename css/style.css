@@ -1,0 +1,36 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 45%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgb(143, 135, 135);
+  box-shadow: 5px 6px rgba(0, 0, 0, 0.424);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
