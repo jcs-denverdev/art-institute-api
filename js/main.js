@@ -12,6 +12,7 @@ function getArt() {
         console.log(data)
 
         let randomArt = data.data[Math.floor(Math.random() * data.data.length)];
+        console.log(randomArt);
         document.querySelector('h2').innerText = randomArt.title;
         
         let endPoint = data.config.iiif_url;
