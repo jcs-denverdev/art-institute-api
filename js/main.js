@@ -12,14 +12,24 @@ function getArt() {
         console.log(data)
 
         let randomArt = data.data[Math.floor(Math.random() * data.data.length)];
-        console.log(randomArt);
+
+        console.log(randomArt)
+
         document.querySelector('h2').innerText = randomArt.title;
         
+        // Find the base IIIF Image API endpoint in the config.iiif_url field
         let endPoint = data.config.iiif_url;
+
+        // Append the image_id of the artwork as a segment to this URL
+        // need a forward slash preceding imageID because the endPoint doesn't end with one
         let imageID = randomArt.image_id;
-        let imageSrc = `/full/200,/0/default.jpg`;
+        console.log(imageID)
+
+        // Append /full/843,/0/default.jpg to the URL
+        let imageSrc = `/full/843,/0/default.jpg`;
 
         document.querySelector('img').src = `${endPoint}/${imageID}${imageSrc}`;
+        // forward slash manually added
 
         const card = document.getElementById('card');
         card.classList.add('card');
